@@ -12,7 +12,20 @@ class _MyWorkShop02State extends State<MyWorkShop02> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: Icon(Icons.home),
         title: Text('Workshop02'),
+        actions: <Widget>[
+          IconButton(
+              onPressed: () {
+                print('ok');
+              },
+              icon: Icon(Icons.notifications)),
+          IconButton(
+              onPressed: () {
+                print('test');
+              },
+              icon: Icon(Icons.headset)),
+        ],
       ),
       body: Container(
           child: Column(
@@ -25,15 +38,18 @@ class _MyWorkShop02State extends State<MyWorkShop02> {
                 width: 40,
                 height: 40,
                 padding: const EdgeInsets.all(2),
-                child: Image.asset('assets/images/hambergerMenu.png',
-                    fit: BoxFit.fill),
+                child: IconButton(onPressed: () {}, icon: Icon(Icons.menu)),
+                // child: Image.asset('assets/images/hambergerMenu.png',
+                //     fit: BoxFit.fill),
               ),
               Container(
                 width: 40,
                 height: 40,
                 padding: const EdgeInsets.all(2),
-                child: Image.asset('assets/images/shoppingCart.png',
-                    fit: BoxFit.fill),
+                child: IconButton(
+                    onPressed: () {}, icon: Icon(Icons.add_shopping_cart)),
+                // child: Image.asset('assets/images/shoppingCart.png',
+                //     fit: BoxFit.fill),
               ),
             ],
           ),
@@ -42,9 +58,11 @@ class _MyWorkShop02State extends State<MyWorkShop02> {
             children: [
               Text('LOGO สำนักงานคณะกรรมการการอาชีวศึกษา',
                   style: TextStyle(
-                      fontSize: 18,
-                      color: Colors.red.shade800,
-                      fontWeight: FontWeight.bold)),
+                    fontSize: 18,
+                    color: Colors.red.shade800,
+                    fontWeight: FontWeight.bold,
+                    // overflow: TextOverflow.visible
+                  )),
             ],
           ),
           Row(
