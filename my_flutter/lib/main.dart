@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_flutter/drawer_button.dart';
+import 'package:my_flutter/workshop_shoes.dart';
 
 void main() {
   runApp(MyApp());
@@ -13,7 +13,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.red),
-      home: DrawerButtonPage(),
+      // home: DrawerButtonPage(),
+      home: MyShopShoesPage(),
     );
   }
 }
