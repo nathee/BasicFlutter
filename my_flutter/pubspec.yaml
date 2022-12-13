@@ -57,10 +57,12 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/images/disableStar.png
-    - assets/images/enableStar.png
-    - assets/images/hambergerMenu.png
-    - assets/images/shoppingCart.png
+    - assets/images/resistor.png
+    - assets/images/inductor.png
+    - assets/images/capacitor.png
+    - assets/images/diode.png
+    - assets/images/transistor.png
+    - assets/images/ic.png
     - assets/images/vecLogo.png
 
   # An image asset can refer to one or more resolution-specific "variants", see

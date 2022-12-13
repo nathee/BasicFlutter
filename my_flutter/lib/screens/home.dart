@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 // ignore_for_file: prefer_const_literals_to_create_immutables
 import 'package:flutter/material.dart';
-import 'package:my_flutter/components/reuse_box.dart';
+import 'package:my_flutter/components/content_box.dart';
 
 class HomeScreen extends StatefulWidget {
   HomeScreen({Key? key}) : super(key: key);
@@ -15,7 +15,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('ไอทีจีเนียส'),
+        title: Text('พื้นฐานอุปกรณ์อิเล็กทรอนิกส์'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -24,128 +24,58 @@ class _HomeScreenState extends State<HomeScreen> {
             Expanded(
                 child: Row(
               children: <Widget>[
-                ReuseBox(
-                    colorText: Colors.teal,
-                    descText: 'Boy',
-                    txtIcon: Icons.boy),
-                ReuseBox(
-                    colorText: Colors.red,
-                    descText: 'GirlX',
-                    txtIcon: Icons.girl),
+                ContentBox(
+                  colorText: Colors.white70,
+                  descText: 'ตัวต้านทาน',
+                  txtIcon: Icons.boy,
+                  imgAddr: 'assets/images/resistor.png',
+                  menuNum: 1,
+                ),
+                ContentBox(
+                  colorText: Colors.white70,
+                  descText: 'ตัวเก็บประจุ',
+                  txtIcon: Icons.girl,
+                  imgAddr: 'assets/images/capacitor.png',
+                  menuNum: 2,
+                ),
               ],
             )),
             Expanded(
                 child: Row(
               children: <Widget>[
-                Expanded(
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Container(
-                      color: Colors.orange,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Icon(
-                            Icons.security,
-                            size: 50.0,
-                            color: Colors.white,
-                          ),
-                          SizedBox(
-                            height: 15.0,
-                          ),
-                          Text(
-                            'Service',
-                            style:
-                                TextStyle(fontSize: 24.0, color: Colors.white),
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
+                ContentBox(
+                  colorText: Colors.white70,
+                  descText: 'ตัวเหนี่ยวนำ',
+                  txtIcon: Icons.boy,
+                  imgAddr: 'assets/images/inductor.png',
+                  menuNum: 3,
                 ),
-                Expanded(
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Container(
-                      color: Colors.brown,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Icon(
-                            Icons.alarm,
-                            size: 50.0,
-                            color: Colors.white,
-                          ),
-                          SizedBox(
-                            height: 15.0,
-                          ),
-                          Text(
-                            'Product',
-                            style:
-                                TextStyle(fontSize: 24.0, color: Colors.white),
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
-                )
+                ContentBox(
+                  colorText: Colors.white70,
+                  descText: 'ไดโอด',
+                  txtIcon: Icons.girl,
+                  imgAddr: 'assets/images/diode.png',
+                  menuNum: 4,
+                ),
               ],
             )),
             Expanded(
                 child: Row(
               children: <Widget>[
-                Expanded(
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Container(
-                      color: Colors.pink,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Icon(
-                            Icons.account_box,
-                            size: 50.0,
-                            color: Colors.white,
-                          ),
-                          SizedBox(
-                            height: 15.0,
-                          ),
-                          Text(
-                            'Profile',
-                            style:
-                                TextStyle(fontSize: 24.0, color: Colors.white),
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
+                ContentBox(
+                  colorText: Colors.white70,
+                  descText: 'ทรานซิสเตอร์',
+                  txtIcon: Icons.boy,
+                  imgAddr: 'assets/images/transistor.png',
+                  menuNum: 5,
                 ),
-                Expanded(
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Container(
-                      color: Colors.blue,
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Icon(
-                            Icons.settings,
-                            size: 50.0,
-                            color: Colors.white,
-                          ),
-                          SizedBox(
-                            height: 15.0,
-                          ),
-                          Text(
-                            'Setting',
-                            style:
-                                TextStyle(fontSize: 24.0, color: Colors.white),
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
-                )
+                ContentBox(
+                  colorText: Colors.white70,
+                  descText: 'ไอซี',
+                  txtIcon: Icons.girl,
+                  imgAddr: 'assets/images/ic.png',
+                  menuNum: 6,
+                ),
               ],
             )),
           ],

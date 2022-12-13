@@ -1,6 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 // ignore_for_file: prefer_const_literals_to_create_immutables
-import 'package:bbl_project/first_screen.dart';
+import 'package:my_flutter/screens/first_screen.dart';
 import 'package:flutter/material.dart';
 
 class SecondScreenPage extends StatefulWidget {
